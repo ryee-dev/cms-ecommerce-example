@@ -9,6 +9,9 @@ body {
 .withBorder {
   border: 1px solid black; }
 
+.whiteText {
+  color: white; }
+
 .container {
   margin: 2rem 3rem; }
 

@@ -1,15 +1,13 @@
 import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'gatsby'
+// import styled from 'styled-components'
 import { StaticQuery, graphql } from "gatsby"
+import Img from 'gatsby-image'
 
 import '@zendeskgarden/react-grid/dist/styles.css';
 import { ThemeProvider } from '@zendeskgarden/react-theming';
 import { Grid, Row, Col } from '@zendeskgarden/react-grid';
-
-const ProductImg = styled.img`
-  max-width: 300px;
-`
+import { Button } from '@zendeskgarden/react-buttons';
+import '@zendeskgarden/react-buttons/dist/styles.css';
 
 const ProductList = ({ data }) => (
   <StaticQuery
@@ -18,6 +16,7 @@ const ProductList = ({ data }) => (
         allDatoCmsProduct {
           edges {
             node {
+              id
               slug
               name
               price
@@ -40,11 +39,21 @@ const ProductList = ({ data }) => (
               {data.allDatoCmsProduct.edges.map(({ node: product }) => (
                 <div key={product.id}>
                   <Col className="withBorder" style={{ padding: '1rem'}}>
-                    <Link to={`/products/${product.slug}`}>
-                      <ProductImg src={product.image.url} alt="product-image" />
-                      <h1>{product.name}</h1>
-                    </Link>
+                    <Img sizes={product.image.sizes} />
+                    <h1>{product.name}</h1>
                     <h3>${product.price}</h3>
+                    <ThemeProvider>
+                      <Button
+                        className="snipcart-add-item"
+                        data-item-id={product.id}
+                        data-item-name={product.name}
+                        data-item-price={product.price}
+                        data-item-image={product.image.url}
+                        data-item-url="/"
+                      >
+                        Add to Cart
+                      </Button>
+                    </ThemeProvider>
                   </Col>
                 </div>
               ))}
