@@ -1,7 +1,7 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
- // You can delete this file if you're not using it
+// exports.sourceNodes = async ({ actions }) => {
+//   const { createNode } = actions
+//   const pokeData = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=151`)
+//   pokeData.forEach(datum => createNode(processDatum(datum)))
+//
+//
+// }

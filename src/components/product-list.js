@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { StaticQuery, graphql } from "gatsby"
 import Img from 'gatsby-image'
+import faker from 'faker';
 
 import '@zendeskgarden/react-grid/dist/styles.css';
 import { ThemeProvider } from '@zendeskgarden/react-theming';
@@ -37,6 +38,15 @@ const ProductList = ({ data }) => (
     `}
     render={data => (
       <ProductListContainer>
+        {/*<ul>*/}
+          {/*<li>{data.FakeImage.image.cats}</li>*/}
+        {/*</ul>*/}
+        <ul>
+          <li>
+            <img src={faker.image.cats()} alt="cat" />
+          </li>
+
+        </ul>
         <ThemeProvider>
           <Grid>
             <Row>
