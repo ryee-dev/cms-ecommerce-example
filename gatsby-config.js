@@ -3,7 +3,7 @@ module.exports = {
     title: 'Dato-Snip-Store',
   },
   plugins: [
-    'gatsby-plugin-sass',
+    `gatsby-plugin-sass`,
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-datocms`,
