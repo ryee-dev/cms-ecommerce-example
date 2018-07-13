@@ -21,7 +21,7 @@ const Layout = ({ children, data }) => (
       <>
         <Helmet title={data.site.siteMetadata.title} />
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div>
+        <div className="container">
           {children}
         </div>
       </>
