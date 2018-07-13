@@ -3,9 +3,9 @@ module.exports = {
     title: 'Dato-Snip-Store',
   },
   plugins: [
+    'gatsby-plugin-styled-components',
     `gatsby-plugin-sass`,
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-styled-components',
     {
       resolve: `gatsby-source-datocms`,
       options: { apiToken: 'c01bcc752a43e4e086d3219a4d37a9' },
