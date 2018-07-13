@@ -36,6 +36,7 @@ const IndexPage = () => (
         </Row>
       </Grid>
     </ThemeProvider>
+    <ProductList/>
     
   </Layout>
 )
