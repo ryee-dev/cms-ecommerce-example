@@ -35,17 +35,16 @@ const ProductList = ({ data }) => (
     `}
     render={data => (
       <ProductListContainer>
-        {/*<ul>*/}
-          {/*<li>{data.FakeImage.image.cats}</li>*/}
-        {/*</ul>*/}
+        <h1>Products</h1>
         <ThemeProvider>
           <GridContainer>
                 {data.allDatoCmsProduct.edges.map(({ node: product }) => (
                   <div key={product.id} style={{ textAlign: "center" }}>
                     <ProductImage src={product.image.url}/>
-                    <h1>{product.name}</h1>
+                    <h2>{product.name}</h2>
                     <h3>${product.price}</h3>
                     <Button
+                      danger pill
                       className="snipcart-add-item"
                       data-item-id={product.id}
                       data-item-name={product.name}
