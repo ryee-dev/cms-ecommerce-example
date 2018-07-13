@@ -1,12 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { StaticQuery, graphql } from "gatsby"
-import Img from 'gatsby-image'
+// import Img from 'gatsby-image'
 import faker from 'faker';
-
-import '@zendeskgarden/react-grid/dist/styles.css';
 import { ThemeProvider } from '@zendeskgarden/react-theming';
-import { Grid, Row, Col } from '@zendeskgarden/react-grid';
 import { Button } from '@zendeskgarden/react-buttons';
 import '@zendeskgarden/react-buttons/dist/styles.css';
 
@@ -41,38 +38,27 @@ const ProductList = ({ data }) => (
         {/*<ul>*/}
           {/*<li>{data.FakeImage.image.cats}</li>*/}
         {/*</ul>*/}
-        <ul>
-          <li>
-            <img src={faker.image.cats()} alt="cat" />
-          </li>
-
-        </ul>
         <ThemeProvider>
-          <Grid>
-            <Row>
-              {data.allDatoCmsProduct.edges.map(({ node: product }) => (
-                <div key={product.id}>
-                  <Col className="withBorder" style={{ padding: '1rem'}}>
-                    <Img sizes={product.image.sizes} />
+          <GridContainer>
+                {data.allDatoCmsProduct.edges.map(({ node: product }) => (
+                  <div key={product.id} style={{ textAlign: "center" }}>
+                    <ProductImage src={product.image.url}/>
                     <h1>{product.name}</h1>
                     <h3>${product.price}</h3>
-                    <ThemeProvider>
-                      <Button
-                        className="snipcart-add-item"
-                        data-item-id={product.id}
-                        data-item-name={product.name}
-                        data-item-price={product.price}
-                        data-item-image={product.image.url}
-                        data-item-url="/"
-                      >
-                        Add to Cart
-                      </Button>
-                    </ThemeProvider>
-                  </Col>
-                </div>
-              ))}
-            </Row>
-          </Grid>
+                    <Button
+                      className="snipcart-add-item"
+                      data-item-id={product.id}
+                      data-item-name={product.name}
+                      data-item-price={product.price}
+                      data-item-image={product.image.url}
+                      data-item-url="/"
+                      style={{display: "block", margin: "0 auto"}}
+                    >
+                      Add to Cart
+                    </Button>
+                  </div>
+                ))}
+          </GridContainer>
         </ThemeProvider>
       </ProductListContainer>
     )}
@@ -80,3 +66,16 @@ const ProductList = ({ data }) => (
 )
 
 export default ProductList
+
+const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(4, auto);
+  grid-auto-flow: row;
+`;
+
+const ProductImage = styled.img`
+  display: block;
+  margin: 0 auto;
+  height: 150px;
+`;
