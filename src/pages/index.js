@@ -23,19 +23,8 @@ const IndexPage = () => (
     </ThemeProvider>
     <br />
     <br />
-    <ThemeProvider>
-      <Grid>
-        <Row>
-          <Col className="withBorder">1 of 3</Col>
-          <Col className="withBorder">2 of 3</Col>
-          <Col className="withBorder">3 of 3</Col>
-        </Row>
-        <Row>
-          <Col className="withBorder">1 of 2</Col>
-          <Col className="withBorder">2 of 2</Col>
-        </Row>
-      </Grid>
-    </ThemeProvider>
+    
+    <ProductList/>
     
   </Layout>
 )
