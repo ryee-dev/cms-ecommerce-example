@@ -1,5 +1,5 @@
 import React from 'react'
-// import styled from 'styled-components'
+import styled from 'styled-components'
 import { StaticQuery, graphql } from "gatsby"
 import Img from 'gatsby-image'
 
@@ -8,6 +8,10 @@ import { ThemeProvider } from '@zendeskgarden/react-theming';
 import { Grid, Row, Col } from '@zendeskgarden/react-grid';
 import { Button } from '@zendeskgarden/react-buttons';
 import '@zendeskgarden/react-buttons/dist/styles.css';
+
+const ProductListContainer = styled.div`
+  margin: 1rem 3rem;
+`;
 
 const ProductList = ({ data }) => (
   <StaticQuery
@@ -32,7 +36,7 @@ const ProductList = ({ data }) => (
       }
     `}
     render={data => (
-      <div>
+      <ProductListContainer>
         <ThemeProvider>
           <Grid>
             <Row>
@@ -60,7 +64,7 @@ const ProductList = ({ data }) => (
             </Row>
           </Grid>
         </ThemeProvider>
-      </div>
+      </ProductListContainer>
     )}
   />
 )
