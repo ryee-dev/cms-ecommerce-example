@@ -25,11 +25,11 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-amazon",
+      resolve: "gatsby-source-yelp",
       options: {
-        key: "GrXBLlHlAl3W9vX5qpZ7A2fqHXU0CV8N5FKvTQKq",
-        q: "pets",
-      }
+        key: "_oJ3cRSNAco7JJ6A_tfypbdG-lZl_SaRiS_vs8X0S8Qx1nUW2jS_p4HKmrZTZo9vhIqLFfkHkIPYd9ZAI2Of8qFxeTAeTRxuST6_yxvUSRBuPVUxceQPZZfxApdJW3Yx",
+        q: "yellow flowers",
+      },
     },
   ],
 };
