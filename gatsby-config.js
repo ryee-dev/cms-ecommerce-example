@@ -18,28 +18,18 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-source-faker`,
+      resolve: "gatsby-source-pixabay",
       options: {
-        schema: {
-          name: [`firstName`, `lastName`],
-          address: [`streetAddress`, `streetName`, `city`, `state`, `zipCode`],
-          internet: [`email`],
-          lorem: [`paragraph`],
-          phone: [`phoneNumber`],
-        },
-        count: 1,
-        type: `PersonalData`,
+        key: "9548082-f996eef7ac46a57db5182d289",
+        q: "yellow flowers",
       },
     },
     {
-      resolve: `gatsby-source-faker`,
+      resolve: "gatsby-source-amazon",
       options: {
-        schema: {
-          company: [`companyName`, `companySuffix`],
-        },
-        count: 3,
-        type: `CompanyData`,
-      },
+        key: "GrXBLlHlAl3W9vX5qpZ7A2fqHXU0CV8N5FKvTQKq",
+        q: "pets",
+      }
     },
   ],
 };
