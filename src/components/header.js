@@ -7,7 +7,8 @@ import { ThemeProvider } from '@zendeskgarden/react-theming';
 const SnipContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
 `;
 
 const HeaderContainer = styled.div`
@@ -25,7 +26,7 @@ const Header = ({ siteTitle }) => (
       </h1>
       <SnipContainer>
         <ThemeProvider>
-          <Button primary href="#" className="snipcart-checkout">View Cart</Button>
+          <Button primary href="#" className="snipcart-checkout" style={{ marginTop: "1rem" }}>View Cart</Button>
         </ThemeProvider>
         <div className="whiteText snipcart-summary">
           <p>Cart: (<span className="snipcart-total-items"></span>)</p>

@@ -25,10 +25,12 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-yelp",
+      resolve: 'gatsby-source-graphql',
       options: {
-        key: "_oJ3cRSNAco7JJ6A_tfypbdG-lZl_SaRiS_vs8X0S8Qx1nUW2jS_p4HKmrZTZo9vhIqLFfkHkIPYd9ZAI2Of8qFxeTAeTRxuST6_yxvUSRBuPVUxceQPZZfxApdJW3Yx",
-        q: "yellow flowers",
+        headers: {
+          authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        },
+        url: 'https://api.yelp.com/graphql',
       },
     },
   ],

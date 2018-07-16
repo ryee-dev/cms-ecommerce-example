@@ -1,8 +1,14 @@
-// exports.sourceNodes = async ({ actions }) => {
-//   const { createNode } = actions
-//   const pokeData = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=151`)
-//   pokeData.forEach(datum => createNode(processDatum(datum)))
+// import { withData } from 'gatsby-apollo'
+// import { HttpLink } from 'apollo-link-http'
 //
-//
+// // can also be a function that accepts a `context` object (SSR only) and returns a config
+// const config = {
+//   link: new HttpLink({
+//     uri: 'https://api.graph.cool/simple/v1/cixmkt2ul01q00122mksg82pn', // Server URL (must be absolute)
+//     opts: {
+//       credentials: 'same-origin' // Additional fetch() options like `credentials` or `headers`
+//     }
+//   })
 // }
-
+//
+// export default withData(config)
