@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
+import { Menu, Item } from '@zendeskgarden/react-menus';
+import '@zendeskgarden/react-menus/dist/styles.css';
 import { Button } from '@zendeskgarden/react-buttons';
 import '@zendeskgarden/react-buttons/dist/styles.css';
 import { ThemeProvider } from '@zendeskgarden/react-theming';
@@ -7,8 +9,7 @@ import { ThemeProvider } from '@zendeskgarden/react-theming';
 const SnipContainer = styled.div`
   display: flex;
   align-items: center;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
 `;
 
 const HeaderContainer = styled.div`
@@ -25,13 +26,20 @@ const Header = ({ siteTitle }) => (
         {siteTitle}
       </h1>
       <SnipContainer>
+        <Button
+          primary
+          style={{ margin: "1rem" }}
+          className="snipcart-checkout"
+        >
+          View Cart
+        </Button>
         <ThemeProvider>
-          <Button primary href="#" className="snipcart-checkout" style={{ marginTop: "1rem" }}>View Cart</Button>
+          <div className="whiteText snipcart-summary">
+            <p>Cart: (<span className="snipcart-total-items"></span>)</p>
+            <p>Total: <span className="snipcart-total-price"></span></p>
+          </div>
         </ThemeProvider>
-        <div className="whiteText snipcart-summary">
-          <p>Cart: (<span className="snipcart-total-items"></span>)</p>
-          <p>Total: <span className="snipcart-total-price"></span></p>
-        </div>
+        
       </SnipContainer>
     </HeaderContainer>
   </div>
