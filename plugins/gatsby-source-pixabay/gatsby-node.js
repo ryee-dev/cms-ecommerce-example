@@ -3,10 +3,10 @@ const queryString = require('query-string')
 const crypto = require('crypto')
 
 exports.sourceNodes = (
-  { boundActionCreators, createNodeId },
+  { actions, createNodeId },
   configOptions
 ) => {
-  const { createNode } = boundActionCreators
+  const { createNode } = actions
   
   // Gatsby adds a configOption that's not needed for this plugin, delete it
   delete configOptions.plugins

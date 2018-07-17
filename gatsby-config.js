@@ -24,14 +24,5 @@ module.exports = {
         q: "yellow flowers",
       },
     },
-    {
-      resolve: 'gatsby-source-graphql',
-      options: {
-        headers: {
-          authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-        },
-        url: 'https://api.yelp.com/graphql',
-      },
-    },
   ],
 };

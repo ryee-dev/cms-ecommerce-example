@@ -22,6 +22,7 @@
     "gatsby-plugin-styled-components": "^3.0.0-beta.2",
     "gatsby-source-datocms": "^2.0.0-alpha.1",
     "gatsby-source-faker": "^1.0.9",
+    "gatsby-source-filesystem": "^1.5.39",
     "node-sass": "^4.9.2",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
