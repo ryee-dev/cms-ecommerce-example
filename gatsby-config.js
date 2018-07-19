@@ -40,6 +40,35 @@ module.exports = {
         // }
         url: 'https://icanhazdadjoke.com/graphql'
       }
-    }
+    },
+    // {
+    //   resolve: 'gatsby-source-apiserver',
+    //   options: {
+    //     // typePrefix: '',
+    //     url: `http://pokeapi.co/api/v2/pokemon/?limit=151`,
+    //     method: 'post',
+    //     headers: {
+    //       'Content-Type': 'application/json'
+    //     },
+    //     data: {
+    //
+    //     },
+    //     name: `pokenode`,
+    //     entityLevel: `data.results.pokenode`,
+    //     schemaType: {
+    //       name: 'String',
+    //       url: 'String',
+    //     },
+    //     auth: {
+    //       username: null,
+    //       password: null
+    //     },
+    //     payloadKey: `body`,
+    //     localSave: true,
+    //     path: `${__dirname}/src/queries/`,
+    //     // verboseOutput: false, // For debugging purposes
+    //     // skipCreateNode: false, // skip import to graphQL, only use if localSave is all you want
+    //   }
+    // }
   ],
 };
