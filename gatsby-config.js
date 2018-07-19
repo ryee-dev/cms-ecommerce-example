@@ -24,5 +24,22 @@ module.exports = {
         q: "yellow flowers",
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'queries',
+        path: `${__dirname}/src/queries`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        // IF API KEY IS NEEDED
+        // headers: {
+        //   authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        // }
+        url: 'https://icanhazdadjoke.com/graphql'
+      }
+    }
   ],
 };
