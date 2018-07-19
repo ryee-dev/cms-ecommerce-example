@@ -9,11 +9,13 @@ import { Button } from '@zendeskgarden/react-buttons';
 // components
 import Layout from '../components/layout';
 import ProductList from '../components/product-list';
-import DadJoke from '../components/dadjokes'
+import DadJokes from '../components/dadjokes';
+import FakeData from '../components/FakeData';
 
 const IndexPage = () => (
   <Layout>
-    <DadJoke />
+    <DadJokes />
+    <FakeData />
     <ProductList />
   </Layout>
 )

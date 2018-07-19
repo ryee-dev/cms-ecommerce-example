@@ -34,13 +34,22 @@ module.exports = {
     {
       resolve: 'gatsby-source-graphql',
       options: {
-        // IF API KEY IS NEEDED
         // headers: {
         //   authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
         // }
         url: 'https://icanhazdadjoke.com/graphql'
       }
     },
+    {
+      resolve: 'gatsby-source-faker',
+      options: {
+        schema: {
+          image: ["animals"],
+        },
+        count: 1,
+        type: "fakerData"
+      }
+    }
     // {
     //   resolve: 'gatsby-source-apiserver',
     //   options: {
