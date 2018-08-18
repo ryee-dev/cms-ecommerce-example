@@ -67,10 +67,11 @@ const ProductList = ({ data }) => (
 export default ProductList
 
 const GridContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-template-rows: repeat(4, auto);
-  grid-auto-flow: row;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+  width: 100%;
 `;
 
 const ProductImage = styled.img`

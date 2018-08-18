@@ -15,7 +15,7 @@ import FakeData from '../components/FakeData';
 const IndexPage = () => (
   <Layout>
     <DadJokes />
-    <FakeData />
+    {/*<FakeData />*/}
     <ProductList />
   </Layout>
 )
