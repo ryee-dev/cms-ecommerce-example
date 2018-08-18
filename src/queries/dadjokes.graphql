@@ -1,7 +1,0 @@
-{
-  joke {
-    id
-    joke
-    permalink
-  }
-}
