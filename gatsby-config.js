@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Dato-Snip-Store',
+    title: 'an-ecom-store',
   },
+  pathPrefix: `/an-ecom-store`,
   plugins: [
     'gatsby-plugin-styled-components',
     `gatsby-plugin-sass`,
